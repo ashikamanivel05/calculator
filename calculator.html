@@ -1,0 +1,62 @@
+<!DOCTYPE.html>
+<html>
+<head>
+
+    <title>Calculator</title>
+    <style>
+        input[type="button"]{
+            width: 50px;
+            height:40px;
+            font-size: 20px;
+            color: darkslategray;
+        }
+        </style>
+    </head>
+<body>
+    <h1>Calculator</h1>
+    <table>
+        <tr>
+            <td colspan="4"><input id= "display" type="text"displayed></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="addtodisplay('1')"></td>
+            <td><input type="button" value="2" onclick="addtodisplay('2')"></td>
+            <td><input type="button" value="3" onclick="addtodisplay('3')"></td>
+            <td><input type="button" value="+" onclick="addtodisplay('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="addtodisplay('4')"></td>
+            <td><input type="button" value="5" onclick="addtodisplay('5')"></td>
+            <td><input type="button" value="6" onclick="addtodisplay('6')"></td>
+            <td><input type="button" value="-" onclick="addtodisplay('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="addtodisplay('7')"></td>
+            <td><input type="button" value="8" onclick="addtodisplay('8')"></td>
+            <td><input type="button" value="9" onclick="addtodisplay('9')"></td>
+            <td><input type="button" value="*" onclick="addtodisplay('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="cleardisplay()"></td>
+            <td><input type="button" value="0" onclick="addtodisplay('0')"></td>
+            <td><input type="button" value="/" onclick="addtodisplay('/')"></td>
+            <td><input type="button" value="=" onclick="calculate()"></td>
+        </tr>
+    </table>
+    <script>
+        function addToDisplay(value) {
+            document.getElementById("display").value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+
+        function calculate() {
+            
+                document.getElementById("display").value = eval(document.getElementById("display").value);
+            
+        }
+  
+</body>
+</html>
